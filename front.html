@@ -71,10 +71,30 @@
 
 
   <script type="text/javascript">
-              
+
+        function postData(thedata){
+          const userAction = async () => {
+          const response = await fetch('http://127.0.0.1:3000/', {
+          method: 'POST',
+          body: thedata, // string or object
+          mode: 'no-cors',
+          headers:{
+            //'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+          }
+          });
+          
+          //const myJson = await response.json(); //extract JSON from the http response
+          // do something with myJson
+          //console.log(myJson);
+          }
+          userAction()
+        }
+
         $.fn.serializeObject = function()
         {
             //var d = new Date().toLocaleString();
+            //var d = new Date().toLocalString();
             var o = {};
             var a = this.serializeArray();
             //o[0] = d;

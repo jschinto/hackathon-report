@@ -19,6 +19,9 @@ app.use(bodyParser.text({}));
 
 //routes
 app.get('/:chain', function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  //next();
 	console.log(req.params.chain);
 	ChainApi.getData(req.params.chain).then(responseData => {
     	res.send(responseData);
@@ -26,6 +29,9 @@ app.get('/:chain', function(req, res) {
 });
 
 app.post('/', function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  //next();
 	console.log(req.body);
 	ChainApi.postData(req.body).then(responseData => {
     	res.send(responseData);

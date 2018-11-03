@@ -88,11 +88,18 @@
         </div>
 
 <script>
-var x={"Name-of-the-Complainant":"jackson","Department":"acct","contact-no":"131231","d-o-i":"     10/12/18","Name-of-the-Accused":"mark","Relationship":"manager","location-of-event":"PA","explaination-of-event":"rape","offense":"ptsd","proof":"none","witnesses":"none"}
+const userAction = async () => {
+                            var url = 'http://127.0.0.1:3000/chain_d3f6679c22a991239659d1e96ba8373959e94e643c39c7b95c9cd256ce29b851';
+                        const response = await fetch(url);
+                        const x = await response.json(); //extract JSON from the http response
+                        // do something with myJson
+                        console.log(x);
                         document.getElementById("name").innerHTML=x["Name-of-the-Complainant"];
                         document.getElementById("complaint").innerHTML=x["explaination-of-event"];
                         document.getElementById("d-o-i").innerHTML=x["d-o-i"];
                         document.getElementById("location-of-event").innerHTML=x["location-of-event"];
+                    }
+                    userAction();
 </script>
   <script type="text/javascript">
         function postData(thedata){
