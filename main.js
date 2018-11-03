@@ -4,4 +4,5 @@ console.log("running");
 var chainapi = require('./chainapi');
 var ChainApi = new chainapi();
 
-ChainApi.getData('chain_93c6920229c316d3f098378fddc78caa2e1d8effe6ac429afc89a7fd191a3e73');
+//ChainApi.postData("{\"Hello\":\"World\"}");
+ChainApi.getData('chain_6972b4c843fb6a43bd94ba772a40908e47652de8161d8a473981a502fba58ca8');

@@ -1,0 +1,38 @@
+.table
+{
+	text-align:center;
+}
+#columnleft div
+{
+	text-align: right;
+	
+}
+#columnright div
+{
+	text-align: left;
+	
+}
+body
+{
+
+}
+div
+{
+	text-align:center;	
+}
+.columns
+{
+	column-count: 2;
+}
+.texts
+{
+	text-align: right;
+}
+.inputs
+{
+	text-align: left;
+}
+table, th,td{
+	border:1px solid black;
+	border-collapse:collapse;
+}
