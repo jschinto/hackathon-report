@@ -27,8 +27,7 @@
   </div>
   <div class="form-field">
   <label for="d-o-i">Date of Incident</label>
-     <textarea name="d-o-i" id="d-o-i" rows="1" cols="40" aria-required="true">
-     </textarea>
+     <input name="d-o-i" id="d-o-i" type="text" value="" size="40" aria-required="true">
      </div>
 
 .
@@ -43,16 +42,19 @@
   </div>
   <div class="form-field">
     <label for="location-of-event">Where did the specific event occur</label>
-     <input name="location-of-event" id="location-of-event" type="text" value="" size="40" aria-required="true">
+     <textarea name="location-of-event" id="location-of-event" rows="1" cols="40" aria-required="true">
+     </textarea>
   </div>
     <div class="form-field">
     <label for="explaination-of-event">explain the events that occured</label>
-     <input name="explaination-of-event" id="explaination-of-event" type="text" value="" size="40" aria-required="true">
+     <textarea name="explaination-of-event" id="explaination-of-event" rows="1" cols="40" aria-required="true">
+     </textarea>
   </div>
    </div>
     <div class="form-field">
     <label for="offense">Describe the harm you have suffered as a result of the event.</label>
-     <input name="offense" id="offense" type="text" value="" size="40" aria-required="true">
+     <textarea name="offense" id="offense" rows="1" cols="40" aria-required="true">
+     </textarea>
   </div>
    </div>
     <div class="form-field">
@@ -72,8 +74,10 @@
               
         $.fn.serializeObject = function()
         {
+            //var d = new Date().toLocaleString();
             var o = {};
             var a = this.serializeArray();
+            //o[0] = d;
             $.each(a, function() {
                 if (o[this.name] !== undefined) {
                     if (!o[this.name].push) {
@@ -83,7 +87,8 @@
                 } else {
                     o[this.name] = this.value || '';
                 }
-            });
+            }
+            );
             return o;
         };
 
