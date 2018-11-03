@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="frontCSS.css">
 <title>Title of the document</title>
 </head>
 
@@ -10,53 +12,175 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title w-100 font-weight-bold">REPORT FORM</h4>
+            
+                <div class="table">
+                    <table style="width:100%">
+                        <tr>
+                            <td class="texts">
+                            <i class="fa fa-user prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="form34">Name of the Complainant </label></td>
+                            <td class="inputs">
+                            <input type="text" id="form34" class="form-control validate">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="texts"><i class="fa fa-envelope prefix grey-text"></i>
+                           <label data-error="wrong" data-success="right" for="form29">Department </label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form32">Email/Phone # </label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form32">Date of Incident </label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form32">Name of the Accused </label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+  <!--                      <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form32">Relationship of the Accused to the Complainant (manager, co-worker, client, etc.) </label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>-->
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form8">Where did the specific event occur</label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form8">explain the events that occured</label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form8">Describe the harm you have suffered as a result of the event. </label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+      <!--                  <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form29">Is there any physical evidence that supports your complaint? If so, please describe or attach copy of evidence.</label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>-->
+                        <tr>
+                            <td class="texts"><label data-error="wrong" data-success="right" for="form32">Were there any witnesses to this? (if yes, provide name)</label></td>
+                            <td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                    </table>
+                </div>
+ <!--               <div class="columns">
+                    <div class="column" id="columnleft">
+                        <div class="md-form mb-5">
+                            <i class="fa fa-user prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="form34">Name of the Complainant </label>
+                        </div>
+                        <div class="md-form mb-5">
+                           <i class="fa fa-envelope prefix grey-text"></i>
+                           <label data-error="wrong" data-success="right" for="form29">Department </label>
+                           <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form32">Email/Phone # </label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form32">Date of Incident </label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form32">Name of the Accused </label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form32">Department </label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form32">Relationship of the Accused to the Complainant (manager, co-worker, client, etc.) </label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form8">Where did the specific event occur</label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form8">explain the events that occured</label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form8">Explain the events that occured</label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form8">Describe the harm you have suffered as a result of the event. </label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form29">Is there any physical evidence that supports your complaint? If so, please describe or attach copy of evidence.</label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+                        <div>
+                            <label data-error="wrong" data-success="right" for="form32">Were there any witnesses to this? (if yes, provide name)</label>
+                            <input type="text" id="form34" class="form-control validate">
+                        </div>
+
+
+                   </div>
+                   <div class="column" id="columnright">
+                    <div>
+                        <input type="text" id="form34" class="form-control validate">
+                    </div>
+                    <div>
+                        <input type="text" id="form34" class="form-control validate">
+                    </div>
+                </div>
+            </div>
             </div>
             <div class="modal-body mx-3">
-                <div class="md-form mb-5">
+-->
+                <!-- <div class="md-form mb-5">
                     <i class="fa fa-user prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form34">Name of the Complainant </label>
                     <input type="text" id="form34" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form34">Name of the Complainant:</label>
                 </div>
 
                 <div class="md-form mb-5">
                     <i class="fa fa-envelope prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form29">Department </label>
                     <input type="email" id="form29" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form29">Department:   </label>
                 </div>
 
                 <div class="md-form mb-5">
                     <i class="fa fa-tag prefix grey-text"></i>
                     <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Email/Phone #</label>
                 </div>
 
                    <div class="md-form mb-5">
                     <i class="fa fa-tag prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form32">Today's Date </label>
                     <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Today's Date:</label>
                 </div>
-                  <li class="divider"></li>
 
-                   <div class="md-form mb-5">
+                <div class="md-form mb-5">
                     <i class="fa fa-tag prefix grey-text"></i>
                     <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Name of the Accused</label>
                 </div>
 
                    <div class="md-form mb-5">
                     <i class="fa fa-tag prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form32">Name of the Accused </label>
                     <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Department</label>
                 </div>
 
                    <div class="md-form mb-5">
                     <i class="fa fa-tag prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form32">Department </label>
                     <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Relationship of the Accused to the Complainant (manager, co-worker, client, etc.):</label>
+                </div>
+
+                   <div class="md-form mb-5">
+                    <i class="fa fa-tag prefix grey-text"></i>
+                    <label data-error="wrong" data-success="right" for="form32">Relationship of the Accused to the Complainant (manager, co-worker, client, etc.) </label>
+                    <input type="text" id="form32" class="form-control validate">
                 </div>
 
                 <div class="md-form">
@@ -77,17 +201,11 @@
                     <label data-error="wrong" data-success="right" for="form8">Describe the harm you have suffered as a result of the event. </label>
                 </div>
 
-
-
                 <div class="md-form">
                     <i class="fa fa-pencil prefix grey-text"></i>
                     <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
                     <label data-error="wrong" data-success="right" for="form8">Where did the specific event occur</label>
                 </div>
-
-                 
-
-
 
                   <div class="md-form mb-5">
                     <i class="fa fa-envelope prefix grey-text"></i>
@@ -105,8 +223,8 @@
                    <div class="witness_info">
                     <i class="fa fa-tag prefix grey-text"></i>
                     <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Where there any witnesses to this? (if yes, provide name)</label>
-                </div>
+                    <label data-error="wrong" data-success="right" for="form32">Were there any witnesses to this? (if yes, provide name)</label>
+                </div> -->
                 <script>
                     function Select_Change() {
                     var x = document.getElementByClassName("select-button")
