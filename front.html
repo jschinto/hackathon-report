@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<h1 style="text-align: center;">Report Form</h5>
+  <h1 style="text-align: center;">Report Form</h5>
 
 
     <form id="myform" action="" method="post">
@@ -27,16 +27,11 @@
   </div>
   <div class="form-field">
   <label for="d-o-i">Date of Incident</label>
-<<<<<<< HEAD
      <input name="d-o-i" id="d-o-i" type="text" value="" size="40" aria-required="true">
-=======
-       <textarea name="d-o-i" id="d-o-i" rows="1" cols="40" aria-required="true">
-     </textarea>
->>>>>>> 995812c7e13e39dd648d9e243da7f02b313db48d
      </div>
 
 .
-
+      
   <div class="form-field">
     <label for="Name-of-the-Accused">Name of the Accused</label>
      <input name="Name-of-the-Accused" id="Name-of-the-Accused" type="text" size="40" aria-required="true">
@@ -72,34 +67,14 @@
      <input name="witnesses" id="witnesses" type="text" value="" size="40" aria-required="true">
   </div>
 
-
+ 
 
 
   <script type="text/javascript">
-        function postData(thedata){
-          const userAction = async () => {
-          const response = await fetch('http://127.0.0.1:3000', {
-          method: 'POST',
-          body: thedata, // string or object
-          headers:{
-            'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json'
-          }
-          });
-          const myJson = await response.json(); //extract JSON from the http response
-          // do something with myJson
-          console.log(myJson);
-          }
-          userAction()
-        }
-
+              
         $.fn.serializeObject = function()
         {
-<<<<<<< HEAD
             //var d = new Date().toLocaleString();
-=======
-            //var d = new Date().toLocalString();
->>>>>>> 995812c7e13e39dd648d9e243da7f02b313db48d
             var o = {};
             var a = this.serializeArray();
             //o[0] = d;
@@ -119,24 +94,24 @@
 
         $(function() {
             $('form').submit(function() {
-                $('#result').text(postData(JSON.stringify($('form').serializeObject())));
+                $('#result').text(JSON.stringify($('form').serializeObject()));
                 return false;
             });
         });
   </script>
 
 
-
+ <h4>HTML Form Data to JSON Object </h4>
 <p><input type="submit" /></p>
 </form>
-<h2>JSON</h2>
+
 <pre id="result">
 </pre>
 
 
 
 
-
+ 
 </body>
 
 </html>
