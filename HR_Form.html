@@ -22,7 +22,7 @@
                             <label data-error="wrong" data-success="right" for="form34">Complainant Name </label></td>
                             <td class="inputs">
                             	<i class="fa fa-user prefix grey-text"></i>
-                            	<label data-error="wrong" data-success="right" for="form34">INSERT NAME </label></td>
+                            	<label id= "Name-of-the-Complainant" data-error="wrong" data-success="right" for="form34">INSERT NAME </label></td>
                             <div id="name"></div><!--GET NAME PUT HERE-->
 
                         </tr>
@@ -32,8 +32,8 @@
                             <label data-error="wrong" data-success="right" for="form34">Complaint </label></td>
                             <td class="inputs">
                             	<i class="fa fa-user prefix grey-text"></i>
-                            	<label data-error="wrong" data-success="right" for="form34">INSERT COMPLAINT </label></td>
-                            <div id="complaint"></div><!--GET COMPLAINT PUT HERE-->
+                            	<label id="complaint" data-error="wrong" data-success="right" for="form34">INSERT COMPLAINT </label></td>
+                            
                         </tr>
                         
                         <tr>
@@ -42,7 +42,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Date of Incident </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT DATE</label></td>
+                        		<label id="d-o-i" data-error="wrong" data-success="right" for="form34">INSERT DATE</label></td>
 
                         </tr>
                         <tr>
@@ -51,7 +51,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Department </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">Accounting</label></td>
+                        		<label id="department" data-error="wrong" data-success="right" for="form34">Accounting</label></td>
 
                         </tr>
                         <tr>
@@ -60,7 +60,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Relationship of the Accused to the Complainant </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+                        		<label id="Relationship" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
 
                         </tr>
                         <tr>
@@ -69,7 +69,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Where the event occured </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+                        		<label id="location-of-event" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
 
                         </tr>
                         <tr>
@@ -78,7 +78,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Explanation of the incident </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+                        		<label id="explaination-of-event" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
 
                         </tr>
                         <tr>
@@ -87,7 +87,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Harm that has come from the event </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+                        		<label id="harm" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
 
                         </tr>
                         <tr>
@@ -96,7 +96,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Evidence </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+                        		<label id= "evidence" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
 
                         </tr>
                         <tr>
@@ -105,7 +105,7 @@
                         		<label data-error="wrong" data-success="right" for="form34">Witnesses </label></td>
                         		<td class="inputs">
                         		<i class="fa fa-user prefix grey-text"></i>
-                        		<label data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+                        		<label id="witnesses" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
 
                         </tr>
                         <tr>
@@ -117,12 +117,32 @@
                         <tr>
                         	<td class="texts">
                         		<i class="fa fa-user prefix grey-text"></i>
+                        		<label data-error="wrong" data-success="right" for="form34">Today's Date </label></td>
+                        		<td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+
+                        </tr>
+                        <tr>
+                        	<td class="texts">
+                        		<i class="fa fa-user prefix grey-text"></i>
                         		<label data-error="wrong" data-success="right" for="form34">Response </label></td>
                         		<td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
 
                         </tr>
       
                     </table>
+                    <script>
+                    	var x={"Name-of-the-Complainant":"jackson","Department":"acct","contact-no":"131231","d-o-i":"     10/12/18","Name-of-the-Accused":"mark","Relationship":"manager","location-of-event":"PA","explaination-of-event":"rape","offense":"ptsd","proof":"none","witnesses":"none"}
+                    	document.getElementById("Name-of-the-Complainant").innerHTML=x["Name-of-the-Complainant"];
+                    	document.getElementById("explaination-of-event").innerHTML=x["explaination-of-event"];
+                    	document.getElementById("complaint").innerHTML=x["explaination-of-event"];
+                    	document.getElementById("d-o-i").innerHTML=x["d-o-i"];
+                    	document.getElementById("department").innerHTML=x["Department"];
+                    	document.getElementById("Relationship").innerHTML=x["Relationship"];
+                    	document.getElementById("location-of-event").innerHTML=x["location-of-event"];
+                    	document.getElementById("harm").innerHTML=x["offense"];
+                    	document.getElementById("evidence").innerHTML=x["proof"];
+                    	document.getElementById("witnesses").innerHTML=x["witnesses"];
+                    </script>
                 </div>
             </div>
         </div>
