@@ -114,7 +114,7 @@
 
         $(function() {
             $('form').submit(function() {
-                $('#result').text(JSON.stringify($('form').serializeObject()));
+                $('#result').text(postData(JSON.stringify($('form').serializeObject())));
                 return false;
             });
         });
