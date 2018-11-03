@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="frontCSS.css">
+<title>CEO Form</title>
+</head>
+<body>
+
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">INDCIDENT REPORT</h4>
+            
+                <div class="table">
+                    <table style="width:100%">
+                        <tr>
+                            <td class="texts">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" data-success="right" for="form34">Complainant Name </label></td>
+                                <td class="inputs">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label id="name" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="texts">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" data-success="right" for="form34">Complaint </label></td>
+                                <td class="inputs">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label id="complaint" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+
+                        </tr>
+                        <tr>
+                            <td class="texts">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" data-success="right" for="form34">Date of Incident </label></td>
+                                <td class="inputs"><label id="d-o-i" data-error="wrong" data-success="right" for="form34">INSERT</label></td>
+
+                        </tr>
+                        <tr>
+                            <td class="texts">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" data-success="right" for="form34">Where the Incident Occured </label></td>
+                                <td class="inputs">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" id="location-of-event" data-success="right" for="form34">INSERT</label></td>
+
+                        </tr>
+                        <tr>
+                        	<td class="texts">
+                        		<i class="fa fa-user prefix grey-text"></i>
+                        		<label data-error="wrong" data-success="right" for="form34">Your Name </label></td>
+                        		<td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+                        </tr>
+                        <tr>
+                        	<td class="texts">
+                        		<i class="fa fa-user prefix grey-text"></i>
+                        		<label data-error="wrong" data-success="right" for="form34">Department </label></td>
+                        		<td class="inputs">
+                        		<i class="fa fa-user prefix grey-text"></i>
+                        		<label data-error="wrong" data-success="right" for="form34">Accounting</label></td>
+
+                        </tr>
+                        <tr>
+                        	<td class="texts">
+                        		<i class="fa fa-user prefix grey-text"></i>
+                        		<label data-error="wrong" data-success="right" for="form34">Explain the events that occured  </label></td>
+                        		<td class="inputs"><input type="text" id="form34" class="form-control validate"></td>
+
+                        </tr>
+                      <!--  <tr>
+                            <td class="texts">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" data-success="right" for="form34"> </label></td>
+                                <td class="inputs">
+                                <i class="fa fa-user prefix grey-text"></i>
+                                <label data-error="wrong" data-success="right" for="form34">Accounting</label></td>
+
+                        </tr>-->
+      
+                    </table>
+                </div>
+            </div>
+        </div>
+
+<script>
+var x={"Name-of-the-Complainant":"jackson","Department":"acct","contact-no":"131231","d-o-i":"     10/12/18","Name-of-the-Accused":"mark","Relationship":"manager","location-of-event":"PA","explaination-of-event":"rape","offense":"ptsd","proof":"none","witnesses":"none"}
+                        document.getElementById("name").innerHTML=x["Name-of-the-Complainant"];
+                        document.getElementById("complaint").innerHTML=x["explaination-of-event"];
+                        document.getElementById("d-o-i").innerHTML=x["d-o-i"];
+                        document.getElementById("location-of-event").innerHTML=x["location-of-event"];
+</script>
+  <script type="text/javascript">
+        function postData(thedata){
+          const userAction = async () => {
+          const response = await fetch('http://127.0.0.1:3000', {
+          method: 'POST',
+          body: thedata, // string or object
+          headers:{
+            'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+          }
+          });
+          const myJson = await response.json(); //extract JSON from the http response
+          // do something with myJson
+          console.log(myJson);
+          }
+          userAction()
+        }
+
+        $.fn.serializeObject = function()
+        {
+            var o = {};
+            var a = this.serializeArray();
+            //o[0] = d;
+            $.each(a, function() {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            }
+            );
+            return o;
+        };
+
+        $(function() {
+            $('form').submit(function() {
+                $('#result').text(postData(JSON.stringify($('form').serializeObject())));
+                return false;
+            });
+        });
+  </script>
+
+
+
+<p><input type="submit" /></p>
+    </div>
+</div>
+</body>
+</html>
