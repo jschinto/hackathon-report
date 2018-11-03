@@ -27,8 +27,12 @@
   </div>
   <div class="form-field">
   <label for="d-o-i">Date of Incident</label>
+<<<<<<< HEAD
+     <input name="d-o-i" id="d-o-i" type="text" value="" size="40" aria-required="true">
+=======
        <textarea name="d-o-i" id="d-o-i" rows="1" cols="40" aria-required="true">
      </textarea>
+>>>>>>> 995812c7e13e39dd648d9e243da7f02b313db48d
      </div>
 
 .
@@ -43,16 +47,19 @@
   </div>
   <div class="form-field">
     <label for="location-of-event">Where did the specific event occur</label>
-     <input name="location-of-event" id="location-of-event" type="text" value="" size="40" aria-required="true">
+     <textarea name="location-of-event" id="location-of-event" rows="1" cols="40" aria-required="true">
+     </textarea>
   </div>
     <div class="form-field">
     <label for="explaination-of-event">explain the events that occured</label>
-     <input name="explaination-of-event" id="explaination-of-event" type="text" value="" size="40" aria-required="true">
+     <textarea name="explaination-of-event" id="explaination-of-event" rows="1" cols="40" aria-required="true">
+     </textarea>
   </div>
    </div>
     <div class="form-field">
     <label for="offense">Describe the harm you have suffered as a result of the event.</label>
-     <input name="offense" id="offense" type="text" value="" size="40" aria-required="true">
+     <textarea name="offense" id="offense" rows="1" cols="40" aria-required="true">
+     </textarea>
   </div>
    </div>
     <div class="form-field">
@@ -88,7 +95,11 @@
 
         $.fn.serializeObject = function()
         {
+<<<<<<< HEAD
+            //var d = new Date().toLocaleString();
+=======
             //var d = new Date().toLocalString();
+>>>>>>> 995812c7e13e39dd648d9e243da7f02b313db48d
             var o = {};
             var a = this.serializeArray();
             //o[0] = d;
@@ -101,7 +112,8 @@
                 } else {
                     o[this.name] = this.value || '';
                 }
-            });
+            }
+            );
             return o;
         };
 
