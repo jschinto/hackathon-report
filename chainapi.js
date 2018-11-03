@@ -9,7 +9,7 @@ function chainapi(){
 		var API_KEY = 'ALTR-92281AF07A205A85B7DB962B62CFA6AC';
 		var SECRET = '99766ae9e30c45aaa4be6173adad88fc5eeba970779e89667eb6f9602bde8e97';
 		var url = 'https://dgl-hackathon.dev.altr.com/api/v1/chain/' + referenceToken + "/";
-		fetch(url, 
+		return fetch(url, 
 		{
 			method:"GET",
 			headers: {
@@ -21,16 +21,16 @@ function chainapi(){
             return results.json();
         })
 
-		.then(responseData => {
+		/*.then(responseData => {
 			console.log(responseData);
 
-			/*this.setState({
+			this.setState({
 			firstName: responseData.data.firstName,
 			role: responseData.data.role,
 			lastName: responseData.data.lastName,
-		});*/
+		});
 
-    	})
+    	})*/
 	}
 
 	this.postData = function(inBody)
@@ -40,7 +40,7 @@ function chainapi(){
 		var API_KEY = 'ALTR-92281AF07A205A85B7DB962B62CFA6AC';
 		var SECRET = '99766ae9e30c45aaa4be6173adad88fc5eeba970779e89667eb6f9602bde8e97';
 		var url = 'https://dgl-hackathon.dev.altr.com/api/v1/chain/';
-		fetch(url, 
+		return fetch(url, 
 		{
 			method:"POST",
 			headers: {
@@ -54,16 +54,16 @@ function chainapi(){
             return results.json();
         })
 
-		.then(responseData => {
+		/*.then(responseData => {
 			console.log(responseData);
 
-			/*this.setState({
+			this.setState({
 			firstName: responseData.data.firstName,
 			role: responseData.data.role,
 			lastName: responseData.data.lastName,
-		});*/
+		});
 
-    	})
+    	}) */
 	}
 }
 module.exports = chainapi;
