@@ -1,17 +1,8 @@
 .table
 {
-	text-align:center;
+	text-align:left;
 }
-#columnleft div
-{
-	text-align: right;
-	
-}
-#columnright div
-{
-	text-align: left;
-	
-}
+
 body
 {
 
@@ -32,7 +23,7 @@ div
 {
 	text-align: left;
 }
-table, th,td{
-	border:1px solid black;
-	border-collapse:collapse;
+
+td{
+	width:50%;
 }
